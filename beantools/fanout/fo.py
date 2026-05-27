@@ -66,7 +66,7 @@ def BGAFanout(info,pads):
 
         newTrack=PCB_TRACK(board)
         newTrack.SetStart(startPos)
-        newTrack.SetEnd(endPos)
+        newTrack.SetEnd(pcbnew.VECTOR2I(int(endPos.x), int(endPos.y)))
         newTrack.SetNet(pad.GetNet())
         newTrack.SetLayer(pad.GetLayer())
         newTrack.SetWidth(traceWidth)
